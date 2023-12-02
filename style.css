@@ -1,59 +1,56 @@
-*{
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    background-color: black;
+    background-color: transparent;
 }
 
-.banner{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75),url(Cyberbunker_vol_3.jpg));
-    background-size: cover;
-    background-position: center;
-
-}
-
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo{
-    width: 120px;
-    cursor: pointer;
-}
-
-.navbar ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 10px;
-    position: relative;
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-
-}
-
-.navbar ul li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #009688;
+header {
     position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
+    left: 87%;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    text-align: right;
+    display: inline-block;
+    z-index: 1;
 }
 
-.navbar ul li:hover::after{
-    width: 100%;
+header a {
+    color: #c4edbf;
+    text-decoration: none;
+    margin-left: 10px;
+}
 
+header a:hover {
+    text-decoration: underline;
+}
+
+.blog-posts {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.post-container {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.post h2 {
+    font-size: 1.5rem;
+}
+
+.banner {
+    max-width: 100%;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    margin: 0 auto; 
 }
