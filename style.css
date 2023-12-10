@@ -5,14 +5,12 @@ body {
 }
 
 #background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('Cyberbunker_vol_3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background-image: url('Cyberbunker_vol_10.png');
+    justify-content: center;
     z-index: -1;
 }
 
@@ -20,6 +18,7 @@ header {
     font-size: large;
     position: absolute;
     left: 82%;
+    width: fit-content;
     background-color: transparent;
     color: #c4edbf;
     padding: 10px;
@@ -30,7 +29,7 @@ header {
 }
 
 header a {
-    color: #c4edbf;
+    color: #3de638;
     text-decoration: none;
     margin-left: 10px;
 }
@@ -62,4 +61,15 @@ header a {
     height: auto;
     display: block; 
     margin: 0 auto; 
+}
+
+#welcomeBanner {
+    font-size: xx-large;
+    background-color: transparent;
+    color: #3de638;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    z-index: 1;
 }
