@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cyber Bunker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="background"></div>
+    <header>
+        <a href="../about/about.html" id="About"></a>
+        <a href="../updates/updates.html" id="Updates"></a>
+        <a href="../login/login.php" id="Login"></a>
+    </header>
+
+    <div class="welcome-banner" id="banner">
+        <h1 id="welcomeBanner"></h1>
+    </div>
+
+    <div class="blog-posts">
+        <div class="post-container">
+            <div class="post">
+                <h2>Blog Post Title 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                <p><a href="#">Read more...</a></p>
+            </div>
+        </div>
+
+        <div class="post-container">
+            <div class="post">
+                <h2>Blog Post Title 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
+                <p><a href="#">Read more...</a></p>
+            </div>
+        </div>
+
+        <button onclick="toggleNewPostForm()">Add New Post</button>
+
+        <div id="newPost">
+            <a href="../blogCreator/blogCreator.php"><h2>Add New Post</h2></a>
+        </div>
+
+    </div>
+    <script src="hover.js"></script>
+    <script src="welcome.js"></script>
+    <script src="blogPost.js"></script>
+</body>
+</html>
