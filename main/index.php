@@ -8,8 +8,9 @@
 <body>
     
     <nav>
-        <a href="../about/about.html" id="About">About</a>
-        <a href="../updates/updates.html" id="Updates">Updates</a>
+        <a href="../main/index.php" id="Main">Main Page</a>
+        <a href="../about/about.php" id="About">About</a>
+        <a href="../updates/updates.php" id="Updates">Updates</a>
         <a href="../login/login.php" id="Login">Login</a>
     </nav>
 

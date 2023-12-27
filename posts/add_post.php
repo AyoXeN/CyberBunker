@@ -21,6 +21,8 @@
 
 <?php
 @include 'database/connection.php';
+session_start();
+$pdo = $_SESSION['pdo'];
 
 // Check if the form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
