@@ -3,45 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Cyber Bunker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/styleMain.css">
 </head>
 <body>
-    <div id="background"></div>
-    <header>
-        <a href="../about/about.html" id="About"></a>
-        <a href="../updates/updates.html" id="Updates"></a>
-        <a href="../login/login.php" id="Login"></a>
-    </header>
+    
+    <nav>
+        <a href="../about/about.html" id="About">About</a>
+        <a href="../updates/updates.html" id="Updates">Updates</a>
+        <a href="../login/login.php" id="Login">Login</a>
+    </nav>
 
-    <div class="welcome-banner" id="banner">
-        <h1 id="welcomeBanner"></h1>
-    </div>
+    <main>
 
-    <div class="blog-posts">
-        <div class="post-container">
-            <div class="post">
-                <h2>Blog Post Title 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-                <p><a href="#">Read more...</a></p>
+        <div>
+            <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
+        </div>
+        
+            <div id="newPost">
+                <a href="../posts/add_post.php"><h2>Add New Post</h2></a>
             </div>
-        </div>
 
-        <div class="post-container">
-            <div class="post">
-                <h2>Blog Post Title 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi.</p>
-                <p><a href="#">Read more...</a></p>
+            <div class="post-container">
+                <iframe src="posts.php" width="100%" height="400" frameborder="0"></iframe>
             </div>
-        </div>
 
-        <button onclick="toggleNewPostForm()">Add New Post</button>
-
-        <div id="newPost">
-            <a href="../blogCreator/blogCreator.php"><h2>Add New Post</h2></a>
-        </div>
-
-    </div>
-    <script src="hover.js"></script>
+    </main>
+    <footer></footer>
+    <!-- <script src="hover.js"></script> -->
     <script src="welcome.js"></script>
     <script src="blogPost.js"></script>
 </body>
