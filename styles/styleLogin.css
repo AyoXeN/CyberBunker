@@ -6,7 +6,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    z-index: 1;
 }
 
 nav {
@@ -17,9 +16,7 @@ nav {
     background-color: #010f01;
     padding: 10px 5px;
     text-align: right;
-    text-decoration: none;
     display: block;
-    z-index: 1;
 }
 
 nav a {
@@ -27,16 +24,19 @@ nav a {
     text-decoration: none;
 }
 
-main{
+main {
     margin: 0 auto;
     top: 100px;
     width: 60%;
     position: relative;
     color: #3de638;
     text-shadow: 2px 2px 0 black;
-    text-decoration: none;
     background-color: transparent;
-    z-index: 1;
+}
+
+#oldOrNew a:link {
+    color: #3de638;
+    text-shadow: 1px 1px 0 black;
     text-decoration: none;
 }
 
@@ -47,7 +47,6 @@ main{
     text-shadow: 2px 2px 0 black;
     text-align: center;
     background-color: transparent;
-    z-index: 1;
 }
 
 form {

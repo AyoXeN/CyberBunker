@@ -7,7 +7,7 @@
 </head>
 <body>
 <nav>
-        <a href="../main/index.php" id="Main">Main Page</a>
+        <a href="../main/index.php" id="mainPage">Main Page</a>
         <a href="../about/about.php" id="About">About</a>
         <a href="../updates/updates.php" id="Updates">Updates</a>
         <a href="../login/login.php" id="Login">Login</a>
@@ -23,8 +23,10 @@
 
             <button type="submit">Login</button>
         </form>
-
-        <a href="register.php" id="register">Join The Legion</a>
+        
+        <div id="oldOrNew">
+            <a href="register.php">Join the legion</a>
+        </div>
 
         <div id="response">
         <?php
