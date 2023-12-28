@@ -34,12 +34,6 @@ main {
     background-color: transparent;
 }
 
-#oldOrNew a:link {
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    text-decoration: none;
-}
-
 #welcomeBanner {
     margin: 10px auto 120px;
     font-size: 48px;

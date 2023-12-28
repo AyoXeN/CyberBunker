@@ -15,65 +15,25 @@
 
     <main>
         <div id="welcomeBanner">Join The Legion</div>
-        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-            <label for="username">Username:</label></br>
-            <input type="text" id="username" name="username" required></br>
-            <label for="password">Password:</label></br>
-            <input type="password" id="password" name="password" required></br>
-            <label for="password">Confirm password:</label></br>
-            <input type="password" id="confirm" name="confirm" required></br>
 
+        <form action="../includes/register.inc.php" method="post">
+
+            <label for="email">E-mail:</label></br>
+            <input type="text" name="email" required></br>
+            <label for="username">Username:</label></br>
+            <input type="text" name="username" required></br>
+            <label for="password">Password:</label></br>
+            <input type="password" name="password" required></br>
+            <label for="password">Confirm password:</label></br>
+            <input type="password" name="confirm" required></br>
             <button type="submit">Join</button>
+
         </form>
 
-        <div id="oldOrNew">
-            <a href="register.php">Join the legion</a>
-        </div>
-        
+        <a href="login.php">Enter the CyberBunker</a>
+
         <div id="response">
-        <?php
-        // Database configuration
-        $db_host = "localhost";
-        $db_user = "AyoXeN";
-        $db_password = "test";
-        $db_name = "cyberbunker";
-
-        // Create a database connection
-        $conn = new mysqli($db_host, $db_user, $db_password, $db_name);
-
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        // Get user input
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        // Query to check if the user exists
-        $sql = "SELECT * FROM users WHERE username = '$username'";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows == 1) {
-            $row = $result->fetch_assoc();
-            $hashed_password = $row['password'];
             
-            // Verify the password
-            if (password_verify($password, $hashed_password)) {
-                // Successful login
-                header("Location: ../main/index.php");
-            } else {
-                // Incorrect password
-                echo "Incorrect password. Please try again.";
-            }
-        } else {
-            // User not found
-            echo "User not found. Please register or try again.";
-        }
-
-        // Close the database connection
-        $conn->close();
-        ?>
         </div>
     </main>
 </body>
