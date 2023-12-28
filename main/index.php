@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Bunker</title>
     <link rel="stylesheet" href="../styles/styleMain.css">
 </head>
@@ -15,7 +16,6 @@
     </nav>
 
     <main>
-
         <div>
             <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
         </div>
@@ -33,7 +33,6 @@
         <div class="post-container">
             <iframe src="posts.php" width="100%" height="400" frameborder="0"></iframe>
         </div>
-
     </main>
     <footer></footer>
     <!-- <script src="hover.js"></script> -->
