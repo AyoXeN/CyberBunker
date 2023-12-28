@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
             // Get user input
             $username = $_POST['username'];
             $password = $_POST['password'];
@@ -33,7 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // User not found
                 echo "User not found. Please register or try again.";
             }
-
 } else {
     header("Location: ../login/login.php");
 }

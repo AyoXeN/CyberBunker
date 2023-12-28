@@ -28,9 +28,6 @@
 
         <a href="register.php">Join the legion</a>
 
-        <div id="response">
-            
-        </div>
     </main>
 </body>
 </html>

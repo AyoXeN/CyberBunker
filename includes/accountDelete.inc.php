@@ -2,7 +2,6 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get user input
-            $email = $_POST['email'];
             $username = $_POST['username'];
             $pass = $_POST['password'];
             $confirm = $_POST['confirm'];
@@ -15,17 +14,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     die();
                 } else {
                     // Query to update the user info
-                    $query = "UPDATE users SET username = :username, pass = :pass, email =:email WHERE id = :id;";
+                    $query = "DELETE FROM users WHERE username = :username AND pass = :pass AND id = :id;";
                     
                     // Non secure way below:
-                    // $query = "UPDATE users SET username = $username, pass = $pass, email =$email WHERE id = $id;";
+                    // $query = "DELETE FROM users WHERE username = $username AND pass = $pass AND id = $id;";
                     // $sql = $pdo->query($query);
 
                     $sql = $pdo->prepare($query);
 
                     $sql->bindParam(":username", $username);
                     $sql->bindParam(":pass", $pass);
-                    $sql->bindParam(":email", $email);
                     $sql->bindParam(":id", $id);
 
                     $sql->execute();

@@ -32,9 +32,6 @@
 
         <a href="login.php">Enter the CyberBunker</a>
 
-        <div id="response">
-            
-        </div>
     </main>
 </body>
 </html>

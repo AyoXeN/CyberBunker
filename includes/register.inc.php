@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
             // Get user input
             $email = $_POST['email'];
             $username = $_POST['username'];
@@ -12,12 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             try {
                 require_once "dbh.inc.php";
                 if($pass != $confirm){
-
                     header("Location: ../login/register.php");
                     die();
-
                 } else {
-    
                     // Query to add the user
                     $query = "INSERT INTO users (username, pass, email) VALUES (:username, :pass, :email);";
                     // Not secure way below:
@@ -36,12 +32,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     header("Location: ../main/index.php");
                     die();
-
                 }
             } catch (PDOException $e) {
                 die("Database connection failed: " . $e->getMessage());
             }
-
 } else {
     header("Location: ../login/login.php");
 }
