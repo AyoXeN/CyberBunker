@@ -1,3 +1,8 @@
+<?php
+require_once '../includes/configSession.inc.php';
+require_once '../includes/registerView.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,18 +23,15 @@
         <div id="welcomeBanner">Join The Legion</div>
 
         <form action="../includes/register.inc.php" method="post">
-
-            <label for="email">E-mail:</label></br>
-            <input type="text" name="email" required></br>
-            <label for="username">Username:</label></br>
-            <input type="text" name="username" required></br>
-            <label for="password">Password:</label></br>
-            <input type="password" name="password" required></br>
-            <label for="password">Confirm password:</label></br>
-            <input type="password" name="confirm" required></br>
+            <?php
+            signupInputs();
+            ?>
             <button type="submit">Join</button>
-
         </form>
+
+        <?php
+        checkSignupErrors();
+        ?>
 
         <a href="login.php">Enter the CyberBunker</a>
 

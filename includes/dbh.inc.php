@@ -12,6 +12,3 @@ try {
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
-
-session_start();
-$_SESSION['pdo'] = $pdo;
