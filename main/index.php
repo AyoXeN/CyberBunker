@@ -1,3 +1,8 @@
+<?php
+require_once '../includes/configSession.inc.php';
+require_once '../includes/loginView.inc.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +17,15 @@
         <a href="../main/index.php" id="Main">Main Page</a>
         <a href="../about/about.php" id="About">About</a>
         <a href="../updates/updates.php" id="Updates">Updates</a>
-        <a href="../login/login.php" id="Login">Login</a>
+        <?php
+        if(!isset($_SESSION["user_id"])){ ?>
+            <a href="../login/login.php" id="Login"><?php outputUsername()?></a>
+        <?php } else {?>
+            <a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a>
+        <?php } ?> 
+        <form action="../includes/logout.inc.php" method="POST">
+            <button type="submit">Logout</button>
+        </form>
     </nav>
 
     <main>

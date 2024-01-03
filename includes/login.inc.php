@@ -3,35 +3,59 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Get user input
             $username = $_POST['username'];
-            $password = $_POST['password'];
+            $pass = $_POST['password'];
 
-            // Create a PDO database connection
             try {
                 require_once "dbh.inc.php";
+                require_once "loginModel.inc.php";
+                require_once "loginController.inc.php";
+
+                // Error handlers
+
+                $errors = [];
+
+                if (emptyInput($username, $pass)) {
+                    $errors["emptyInput"] = "Fill in all fields!";
+                }    
+
+                $result = getUser($pdo, $username);
+
+                if(wrongUsername($result)){
+                    $errors["wrongUsername"] = "User does not exist!";
+                }
+
+                if(!wrongUsername($result) && wrongPassword($pass, $result["pass"])){
+                    $errors["wrongPassword"] = "Wrong password!";
+                }
+                
+                require_once "configSession.inc.php";
+
+                if($errors) {
+                    $_SESSION["errors_login"] = $errors;
+
+                    header("Location: ../login/login.php");
+                    die();
+                }
+                
+                $newSessionId = session_create_id();
+                $sessionId = $newSessionId . "_" . $result["id"];
+                session_id($sessionId);
+
+                $_SESSION["user_id"] = $result["id"];
+                $_SESSION["user_username"] = htmlspecialchars($result["username"]); // Prevents XSS
+
+                $_SESSION["last_regeneration"] = time();
+
+                header("Location: ../login/login.php?login=success");
+
+                $pdo = null;
+                $sql = null;
+
+                die();
             } catch (PDOException $e) {
                 die("Database connection failed: " . $e->getMessage());
             }
-
-            // Query to check if the user exists
-            $sql = "SELECT * FROM users WHERE username = '$username'";
-            $result = $conn->query($sql);
-
-            if ($result->num_rows == 1) {
-                $row = $result->fetch_assoc();
-                $hashed_password = $row['password'];
-                
-                // Verify the password
-                if (password_verify($password, $hashed_password)) {
-                    // Successful login
-                    header("Location: ../main/index.php");
-                } else {
-                    // Incorrect password
-                    echo "Incorrect password. Please try again.";
-                }
-            } else {
-                // User not found
-                echo "User not found. Please register or try again.";
-            }
 } else {
     header("Location: ../login/login.php");
+    die();
 }

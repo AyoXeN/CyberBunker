@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/configSession.inc.php';
 require_once '../includes/registerView.inc.php';
+require_once '../includes/loginView.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -16,25 +17,27 @@ require_once '../includes/registerView.inc.php';
         <a href="../main/index.php" id="mainPage">Main Page</a>
         <a href="../about/about.php" id="About">About</a>
         <a href="../updates/updates.php" id="Updates">Updates</a>
-        <a href="../login/login.php" id="Login">Login</a>
+        <a href="../login/login.php" id="Login"><?php outputUsername()?></a>
     </nav>
 
     <main>
-        <div id="welcomeBanner">Join The Legion</div>
-
-        <form action="../includes/register.inc.php" method="post">
-            <?php
-            signupInputs();
-            ?>
-            <button type="submit">Join</button>
-        </form>
-
         <?php
-        checkSignupErrors();
-        ?>
+        if(!isset($_SESSION["user_id"])){ ?>
+            <div id="welcomeBanner">Join The Legion</div>
 
-        <a href="login.php">Enter the CyberBunker</a>
+            <form action="../includes/register.inc.php" method="post">
+                <?php
+                signupInputs();
+                ?>
+                <button type="submit">Join</button>
+            </form>
 
+            <?php
+            checkSignupErrors();
+            ?>
+
+            <a href="login.php">Enter the CyberBunker</a>
+        <?php } ?>
     </main>
 </body>
 </html>
