@@ -1,6 +1,7 @@
 <?php
+// This file handles outputs
 
-declare(strict_types=1); // Require data type in function declaration
+declare(strict_types=1); // Require data type in function declaration 
 
 try {
     require_once "dbh.inc.php";

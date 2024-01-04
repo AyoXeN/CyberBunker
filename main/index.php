@@ -4,7 +4,7 @@ require_once '../includes/loginView.inc.php';
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,21 +14,24 @@ require_once '../includes/loginView.inc.php';
 </head>
 
 <body>
-    
-    <nav>
-        <a href="../main/index.php" id="Main">Main Page</a>
-        <a href="../about/about.php" id="About">About</a>
-        <a href="../updates/updates.php" id="Updates">Updates</a>
-        <?php
-        if(!isset($_SESSION["user_id"])){ ?>
-            <a href="../login/login.php" id="Login">Login</a>
-        <?php } else {?>
-            <a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a>
-        <?php } ?> 
-        <form action="../includes/logout.inc.php" method="POST">
-            <button type="submit">Logout</button>
-        </form>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../main/index.php" id="Main">Main Page</a></li>
+                <li><a href="../about/about.php" id="About">About</a></li>
+                <li><a href="../updates/updates.php" id="Updates">Updates</a></li>
+                <?php
+                if(!isset($_SESSION["user_id"])){ ?>
+                    <li><a href="../login/login.php" id="Login">Login</a></li>
+                <?php } else {?>
+                    <li><a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a></li>
+                    <form action="../includes/logout.inc.php" method="POST">
+                        <button type="submit">Logout</button>
+                    </form>
+                <?php } ?>
+            </ul> 
+        </nav>
+    </header>
 
     <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
 
@@ -48,5 +51,6 @@ require_once '../includes/loginView.inc.php';
         </article>
     </main>
     <footer></footer>
+    <script src="../js/hover.js"></script>
 </body>
 </html>

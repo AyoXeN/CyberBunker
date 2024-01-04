@@ -22,8 +22,8 @@ $verificationHash = hash("sha256", $dataToHash);
 
 if($storedHash === $verificationHash) {
     echo $storedHash;
-    echo </br>;
+    echo "</br>";
     echo $verificationHash;
 } else {
-    echo "Not the same data!"
+    echo "Not the same data!";
 }

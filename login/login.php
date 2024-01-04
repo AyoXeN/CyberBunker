@@ -14,17 +14,21 @@ require_once '../includes/loginView.inc.php';
 </head>
 
 <body>
-    <nav>
-        <a href="../main/index.php" id="mainPage">Main Page</a>
-        <a href="../about/about.php" id="About">About</a>
-        <a href="../updates/updates.php" id="Updates">Updates</a>
-        <?php
-        if(!isset($_SESSION["user_id"])){ ?>
-            <a href="../login/login.php" id="Login">Login</a>
-        <?php } else {?>
-            <a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a>
-        <?php } ?>
-    </nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../main/index.php" id="Main">Main Page</a></li>
+                <li><a href="../about/about.php" id="About">About</a></li>
+                <li><a href="../updates/updates.php" id="Updates">Updates</a></li>
+                <?php
+                if(!isset($_SESSION["user_id"])){ ?>
+                    <li><a href="../login/login.php" id="Login">Login</a></li>
+                <?php } else {?>
+                    <li><a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a></li>
+                <?php } ?>
+            </ul> 
+        </nav>
+    </header>
 
     <main>
         <?php
@@ -51,6 +55,7 @@ require_once '../includes/loginView.inc.php';
 
         
     </main>
+    <script src="../js/hover.js"></script>
 </body>
 </html>
 

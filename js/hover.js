@@ -27,6 +27,7 @@ function generateRandomHex() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 
+setupLink('Main', 'Main Page');
 setupLink('About', 'About');
 setupLink('Updates', 'Updates');
 setupLink('Login', 'Login');
