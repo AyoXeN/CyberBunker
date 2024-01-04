@@ -49,9 +49,9 @@ header("Location: ../login/login.php");
     </nav>
 
     <main>
-        <div>
+        <header>
             <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
-        </div>
+        </header>
         
         <div id="newPost">
             <a href="../posts/add_post.php"><h2>Add New Post</h2></a>
@@ -59,19 +59,19 @@ header("Location: ../login/login.php");
         <section>
             <h2>Search results: </h2>
 
-            <div class="post-container">
+            <article>
                 <?php
                     if (empty($result)) {
-                        echo "<div>"
-                        echo "<p>There are no results found.</p>"
-                        echo "</div>"
+                        echo "<div>";
+                        echo "<p>There are no results found.</p>";
+                        echo "</div>";
                     } else {
                         foreach ($result as $row) {
                             //To be continued...
                         }
                     }
                 ?>
-            </div>
+            </article>
         </section>
     </main>
     <footer></footer>

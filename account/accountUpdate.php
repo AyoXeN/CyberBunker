@@ -14,7 +14,7 @@
         <a href="../login/login.php" id="Login">Login</a>
     </nav>
 
-    <main>
+    <section>
 
         <h2>Update account</h2>
         <form action="../includes/accountUpdate.inc.php" method="post">
@@ -37,7 +37,7 @@
 
         </form>
 
-    </main>
+    </section>
 </body>
 </html>
 

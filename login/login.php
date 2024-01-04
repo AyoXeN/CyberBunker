@@ -8,21 +8,28 @@ require_once '../includes/loginView.inc.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/styleLogin.css">
     <title>Login</title>
 </head>
+
 <body>
-<nav>
+    <nav>
         <a href="../main/index.php" id="mainPage">Main Page</a>
         <a href="../about/about.php" id="About">About</a>
         <a href="../updates/updates.php" id="Updates">Updates</a>
-        <a href="../login/login.php" id="Login"><?php outputUsername()?></a>
+        <?php
+        if(!isset($_SESSION["user_id"])){ ?>
+            <a href="../login/login.php" id="Login">Login</a>
+        <?php } else {?>
+            <a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a>
+        <?php } ?>
     </nav>
 
     <main>
         <?php
         if(!isset($_SESSION["user_id"])){ ?>
-            <div id="welcomeBanner">Identify Yourself</div>
+            <h1 id="welcomeBanner">Identify Yourself</h1>
 
             <form action="../includes/login.inc.php" method="post">
 

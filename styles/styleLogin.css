@@ -16,11 +16,13 @@ nav {
     background-color: #010f01;
     padding: 10px 5px;
     text-align: right;
-    display: block;
+    text-decoration: none;
+    float: left;
 }
 
 nav a {
     color: #3de638;
+    text-shadow: 1px 1px 0 black;
     text-decoration: none;
 }
 
@@ -34,9 +36,10 @@ main {
     background-color: transparent;
 }
 
-#welcomeBanner {
+h1 {
     margin: 10px auto 120px;
     font-size: 48px;
+    text-transform: uppercase;
     color: #3de638;
     text-shadow: 2px 2px 0 black;
     text-align: center;
@@ -55,9 +58,8 @@ input {
     width: 300px;
 }
 
-#response {
-    position: relative;
-    margin: 15px auto;
-    text-align: center;
-    width: max-content;
+main a {
+    color: #3de638;
+    text-shadow: 1px 1px 0 black;
+    text-decoration: none;
 }

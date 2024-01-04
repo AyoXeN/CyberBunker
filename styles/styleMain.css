@@ -2,7 +2,7 @@ body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('Main.png');
+    background-image: url('Cyberbunker.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -17,7 +17,7 @@ nav {
     padding: 10px 5px;
     text-align: right;
     text-decoration: none;
-    display: block;
+    float: left;
 }
 
 nav a {
@@ -35,7 +35,7 @@ main {
     background-color: transparent;
 }
 
-.post-container iframe{
+article iframe{
     color: #3de638;
     text-shadow: 1px 1px 0 black;
     text-decoration: none;
@@ -57,9 +57,10 @@ main {
     background-color: #010f01;
 }
 
-#welcomeBanner {
+header {
     font-size: xx-large;
     color: #3de638;
+    text-transform: uppercase;
     text-shadow: 1px 1px 0 black;
     text-align: center;
     background-color: #0e2305;
