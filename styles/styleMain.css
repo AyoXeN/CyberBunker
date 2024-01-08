@@ -72,29 +72,6 @@ main {
     background-color: transparent;
 }
 
-article iframe{
-    height: 200vh;
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    text-decoration: none;
-    background-color: #010f01;
-}
-
-.post h2 {
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-
-#newPost a{
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    text-decoration: none;
-    background-color: #010f01;
-}
-
 #welcomeBanner {
     font-family: DotGothic16;
     font-size: xx-large;
@@ -103,4 +80,52 @@ article iframe{
     text-shadow: 1px 1px 0 black;
     text-align: center;
     background-color: #0e2305;
+}
+
+#newPost a{
+    color: #3de638;
+    text-shadow: 1px 1px 0 black;
+    text-decoration: none;
+    background-color: #010f01;
+}
+
+/* Post styling  */
+
+article {
+    height: 200vh;
+    padding: 20px 1%;
+    color: #3de638;
+    text-shadow: 1px 1px 0 black;
+    background-color: #010f01;
+}
+
+.blogPostSummary {
+    width: 95%;
+    margin: 25px auto;
+    padding: 20px 30px;
+    color: #3de638;
+    border: solid 2px #3de638;
+}
+
+.postHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogPostSummary h3{
+    font-size: xx-large;
+}
+
+.blogPostSummary h4{
+    font-size: larger;
+}
+
+.blogPostSummary img{
+    display: flex;
+    justify-content: center;
+}
+
+.blogPostSummary a{
+    display: flex;
+    justify-content: center;
 }

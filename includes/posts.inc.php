@@ -4,21 +4,12 @@ declare(strict_types=1); // Require data type in function declaration
 
 try {
     require_once "dbh.inc.php";
-    require_once "registerModel.inc.php";
-    require_once "registerController.inc.php";
-    // Retrieve blog posts from the database
-    $query = "SELECT * FROM blog_posts ORDER BY created_at DESC";
-    $stmt = $pdo->query($query);
+    require_once "postsModel.inc.php";
+    require_once "postsController.inc.php";
 
-    // Fetch and display the posts
+    $result = getPosts($pdo);
 
-    // <h1>Recent updates:</h1>
-    //  while ($row = $stmt->fetch(PDO::FETCH_ASSOC)): 
-    //         <h2> echo htmlspecialchars($row['title']);</h2>
-    //         <p> echo nl2br(htmlspecialchars($row['content']));</p>
-    //         <p>Posted on:  echo htmlspecialchars($row['created_at']);</p>
-    //         <hr>
-    //  endwhile; 
+    require_once "postsView.inc.php";
 
     $pdo = null;
     $sql = null;

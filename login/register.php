@@ -1,7 +1,7 @@
 <?php
 require_once '../includes/configSession.inc.php';
-require_once '../includes/registerView.inc.php';
-require_once '../includes/loginView.inc.php';
+require_once '../includes/views/registerView.inc.php';
+require_once '../includes/views/loginView.inc.php';
 ?>
 
 <!DOCTYPE html>

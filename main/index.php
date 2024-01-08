@@ -1,6 +1,7 @@
 <?php
 require_once '../includes/configSession.inc.php';
-require_once '../includes/loginView.inc.php';
+require_once '../includes/views/loginView.inc.php';
+require_once '../includes/views/postsView.inc.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +48,9 @@ require_once '../includes/loginView.inc.php';
         </div>
 
         <article>
-            <iframe src="posts.php" width="100%" height="400" frameborder="0"></iframe>
+            <?php
+                outputAllPostSummaries();
+            ?>
         </article>
     </main>
     <footer></footer>
