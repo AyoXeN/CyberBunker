@@ -1,3 +1,0 @@
-<?php
-
-password_hash() ;
