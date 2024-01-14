@@ -1,0 +1,1 @@
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57

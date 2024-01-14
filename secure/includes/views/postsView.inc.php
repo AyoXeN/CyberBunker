@@ -1,7 +1,7 @@
 <?php
 // This file handles outputs
 
-// declare(strict_types=1); // Require data type in function declaration 
+declare(strict_types=1); // Require data type in function declaration 
 
 function createSummary(string $content,int $wordsMax = 100) {
     $wordsArray = explode(" ", $content);

@@ -1,6 +1,7 @@
 <?php
 // This file handles data from database
 
+
 declare(strict_types=1); // Require data type in function declaration
 
 function getUser(object $pdo, string $username) {

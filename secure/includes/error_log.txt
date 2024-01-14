@@ -1,0 +1,17 @@
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:54
+Error: [2] Undefined variable $undefinedVar - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
+Error: [2] Undefined variable $test - D:\xampp\htdocs\CyberBunker\secure\main\index.php:57
