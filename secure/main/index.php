@@ -20,41 +20,50 @@ require_once '../includes/views/postsView.inc.php';
         <nav>
             <ul>
                 <li><a href="../main/index.php" id="Main">Main Page</a></li>
-                <li><a href="../about/about.php" id="About">About</a></li>
-                <li><a href="../updates/updates.php" id="Updates">Updates</a></li>
+                <li><a href="#" id="About">About</a></li>
+                <li><a href="#" id="Updates">Updates</a></li>
                 <?php
                 if(!isset($_SESSION["user_id"])){ ?>
                     <li><a href="../login/login.php" id="Login">Login</a></li>
                 <?php } else {?>
                     <li><a href="../profile/profile.php" id="Profile"><?php outputUsername()?></a></li>
+                    <li>
                     <form action="../includes/logout.inc.php" method="POST">
                         <button type="submit">Logout</button>
                     </form>
+                    </li>
                 <?php } ?>
             </ul> 
         </nav>
     </header>
 
-    <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
-
     <main>
-        <form class="searchForm" action="../posts/postSearch.php" method="POST">
-            <label for="search">Search for post:</label>
-            <input id="search" type="text" name="postSearch" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-        
-        <div id="newPost">
-            <a href="../posts/add_post.php"><h2>Add New Post</h2></a>
-        </div>
+    <h1 id="welcomeBanner">
+        <div id="lineOne">Welcome to CyberBunker!</div>
+        <div id="lineTwo">This is a one man honeypot project</div>
+        <div id="lineThree">created to better understand the web security.</div>
+    </h1>
+
 
         <article>
+            <div class="matrix"></div>
+            <form class="searchForm" action="../posts/postSearch.php" method="POST">
+                <input type="text" name="postSearch" placeholder="Search for post">
+                <button type="submit">Search</button>
+            </form>
+            
+            <!-- <div id="newPost">
+                <a href="#"><h2>Add New Post</h2></a>
+            </div> -->
+
             <?php
                 outputAllPostSummaries();
+                echo $var; // test logging
             ?>
         </article>
     </main>
     <footer></footer>
     <script src="../js/hover.js"></script>
+    <!-- <script src="../js/matrix.js"></script> -->
 </body>
 </html>

@@ -23,7 +23,7 @@ body {
     background-attachment: fixed;
 }
 
-a {
+a, li form {
     cursor: pointer;
 }
 
@@ -56,7 +56,7 @@ nav ul li {
     margin-right: 35px;
 }
 
-nav ul li a {
+nav ul li a, form{
     font-family: DotGothic16;
     color: #3de638;
     text-shadow: 1px 1px 0 black;
@@ -82,11 +82,28 @@ main {
     background-color: #0e2305;
 }
 
-#newPost a{
+.searchForm {
+    display: flex;
+    border: solid 2px #3de638;
+}
+
+.searchForm label {
+    padding-left: 20px;
+    justify-content: left;
+}
+
+.searchForm button {
+    justify-content: right;
+}
+
+#newPost a {
+    margin-top: 20px;
+    font-size: large;
     color: #3de638;
     text-shadow: 1px 1px 0 black;
     text-decoration: none;
-    background-color: #010f01;
+    display: flex;
+    justify-content: center;
 }
 
 /* Post styling  */
@@ -102,7 +119,7 @@ article {
 .blogPostSummary {
     width: 95%;
     margin: 25px auto;
-    padding: 20px 30px;
+    padding: 20px 20px;
     color: #3de638;
     border: solid 2px #3de638;
 }
@@ -121,11 +138,15 @@ article {
 }
 
 .blogPostSummary img{
+    height: 250px;
     display: flex;
-    justify-content: center;
+    margin: auto;
 }
 
 .blogPostSummary a{
+    width: fit-content;
     display: flex;
-    justify-content: center;
+    margin: auto;
+    padding: 3px;
+    border: solid 2px #3de638;
 }

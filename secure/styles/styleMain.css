@@ -8,124 +8,299 @@
     src: url(fonts/JosefinSans-VariableFont_wght.ttf);
 }
 
-@font-face {
-    font-family: DotGothic16;
-    src: url(fonts/DotGothic16-Regular.ttf);
+* {
+/*Box model stuff*/
+    margin: 0;
+    padding: 0;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    font-family: JosefinSans;
-    margin: 0;
-    padding: 0;
-    background-image: url('Cyberbunker.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Box model stuff*/
+    min-height: 100vh;
     background-attachment: fixed;
+    background-color: black;
+    background-image: url('Cyberbunker.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+/*Typography stuff*/
+    font-family: Tektur;
+/*Miscellaneous*/
+    /* animation: backgroundSlide 2s;    animation-fill-mode: forwards; */
 }
 
-a {
+/* @keyframes backgroundSlide {
+    to { background-position: 0 -120vh }
+} */
+
+a, li form {
+/*Miscellaneous*/
     cursor: pointer;
 }
 
 header {
+/*Display stuff*/
+    display: flex;
+    justify-content: right;
+/*Positioning stuff*/
+    position: fixed;
     top: 0;
+    z-index: 1;
+/*Box model stuff*/
     width: 100%;
     height: 40px;
     background-color: #010f01;
-    display: flex;
-    position: fixed;
-    justify-content: right;
-    z-index: 1;
 
 }
 
 nav {
+/*Positioning stuff*/
     position: relative;
     right: 0;
-    width: 470px;
+/*Box model stuff*/
+    width: 540px;
 }
 
 nav ul {
+/*Miscellaneous*/
     list-style: none;
 }
 
 nav ul li {
+/*Display stuff*/
     display: inline;
-    float: left;
-    padding: 10px;
+/*Box model stuff*/
     margin-right: 35px;
+    padding: 10px;
+/*Miscellaneous*/
+    float: left;
 }
 
-nav ul li a {
-    font-family: DotGothic16;
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
+nav ul li a, form{
+/*Typography stuff*/
     text-decoration: none;
+    text-shadow: 1px 1px 0 black;
+    color: #3de638;
 }
 
 main {
-    margin: 0 auto;
+/*Positioning stuff*/
+    top: 30vh;
+/*Box model stuff*/
     width: 60%;
-    position: relative;
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
+    margin: 0 auto;
     background-color: transparent;
+/*Typography stuff*/
+    color: #3de638;
 }
 
 #welcomeBanner {
-    font-family: DotGothic16;
-    font-size: xx-large;
-    color: #3de638;
+/*Positioning stuff*/
+    position: relative;
+/*Typography stuff*/
+    font-size: x-large;
+    text-shadow: 2px 2px 0 black;
     text-transform: uppercase;
-    text-shadow: 1px 1px 0 black;
-    text-align: center;
-    background-color: #0e2305;
+    color: #3de638;
 }
 
-#newPost a{
+#welcomeBanner div {
+/*Box model stuff*/
+    width: 0;
+/*Manipulations stuff*/
+    animation-fill-mode: forwards;
+/*Miscellaneous*/
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#lineOne {
+/*Manipulations stuff*/
+    animation:        typing 2s steps(23),        cursor 1.54s step-end;
+}
+
+#lineTwo {
+/*Manipulations stuff*/
+    animation:        typing 2s steps(34),        cursor 1.54s step-end;
+    animation-delay: 1.5s;   
+}
+
+#lineThree {
+/*Manipulations stuff*/
+    animation:        typing 2s steps(46),        cursor 1.54s steps(46) infinite;
+    animation-delay: 3.3s;
+    animation-fill-mode: backwards;
+}
+/*Banner typing effect*/
+
+@keyframes cursor {
+    from { border-right: 5px solid }
+    to { border-color: transparent }
+}
+
+@keyframes typing {
+    50% { width: 0%}
+    100% { width: 100% }
+}
+
+.searchForm {
+/*Display stuff*/
+    display: flex;
+    justify-content: space-between;
+/*Box model stuff*/
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+
+.searchForm input {
+/*Box model stuff*/
+    width: 50%;
+    height: 100%;
+    padding: 20px 45px 20px 20px;
+    border: none;
+    border: 2px solid #6c6d64;
+    border-radius: 5px;
+    outline: none;
+    background: #010f01;
+}
+
+.searchForm input::placeholder {
+/*Typography stuff*/
+    color: #3de638;
+}
+
+.searchForm button {
+/*Box model stuff*/
+    width: 20%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #010f01;
+/*Typography stuff*/
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #3de638;
+/*Miscellaneous*/
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
+/* #newPost a {
+    margin-top: 20px;
+    font-size: large;
     color: #3de638;
     text-shadow: 1px 1px 0 black;
     text-decoration: none;
-    background-color: #010f01;
-}
+    display: flex;
+    justify-content: center;
+} */
 
 /* Post styling  */
 
 article {
-    height: 200vh;
-    padding: 20px 1%;
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    background-color: #010f01;
+/*Box model stuff*/
+    padding: 25px 30px;
+    border-radius: 10px;
+    background: transparent;
+/*Miscellaneous*/
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px black;
 }
 
-.blogPostSummary {
-    width: 95%;
-    margin: 25px auto;
-    padding: 20px 30px;
+/* Matrix effect  */
+
+/* .matrix {
+    position: absolute;
+    top: -160vh;
+    height: 130vh;
+    width: 20px;
     color: #3de638;
-    border: solid 2px #3de638;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: drop 3s linear;
+    animation-iteration-count: 2;
+}
+
+@keyframes drop {
+    to{
+        top: 100vh;
+    }
+}
+
+.matrix::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.973), rgba(0, 0, 0, 0.82));
+} */
+
+.blogPostSummary {
+/*Box model stuff*/
+    width: 100%;
+    margin: 25px auto;
+    padding: 20px 20px;
+    border: 2px solid #6c6d64;
+    border-radius: 5px;
+    background: #010f01;
+/*Typography stuff*/
+    color: #3de638;
 }
 
 .postHeader {
+/*Display stuff*/
     display: flex;
     justify-content: space-between;
 }
 
 .blogPostSummary h3{
+/*Typography stuff*/
     font-size: xx-large;
 }
 
 .blogPostSummary h4{
+/*Typography stuff*/
     font-size: larger;
 }
 
 .blogPostSummary img{
+/*Display stuff*/
     display: flex;
-    justify-content: center;
+/*Box model stuff*/
+    height: 250px;
+    margin: 20px auto;
+    border-radius: 5px;
 }
 
 .blogPostSummary a{
+/*Display stuff*/
     display: flex;
+    align-content: center;
     justify-content: center;
+/*Box model stuff*/
+    width: 20%;
+    height: 45px;
+    margin: auto;
+    padding: 9px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: #010f01;
+/*Typography stuff*/
+    font-size: 18px;
+    font-weight: 600;
+    color: #3de638;
+/*Miscellaneous*/
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
 }

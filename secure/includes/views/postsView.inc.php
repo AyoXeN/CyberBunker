@@ -17,11 +17,11 @@ function outputPostSummary(array $result,string $summary) {
     echo '<div class="postHeader">';
     echo '  <h4>Author: ' . htmlspecialchars($result["author"]) . '</h4>'; // Prevents XSS - OWASP TOP3
     echo '  <h3>' . htmlspecialchars($result["title"]) . '</h3>'; // Prevents XSS - OWASP TOP3
-    echo '  <h4>' . $result["created_at"] . '</h4></br>'; // Set automatically, not by user
+    echo '  <h4>' . $result["created_at"] . '</h4>'; // Set automatically, not by user
     echo '</div>';
     echo '  <img src="' . htmlspecialchars($result["image_url"]) . '"></br>'; // Prevents XSS - OWASP TOP3
     echo '  <p>' . htmlspecialchars($summary) . '</p></br>'; // Prevents XSS - OWASP TOP3
-    echo '  <a href="../posts/post.php?id=' . $result["id"] . '">Read more</a>'; // Set automatically, not by user
+    echo '  <a href="../posts/article.php?id=' . $result["id"] . '">Read more</a>'; // Set automatically, not by user
     echo '</div>';
 }
 

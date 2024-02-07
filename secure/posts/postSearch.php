@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         require_once "../includes/dbh.inc.php";
             // Query to add the user
-            $query = "SELECT * FROM blogposts WHERE title LIKE '%:postSearch%';";
+            $query = "SELECT * FROM blogposts WHERE title LIKE ':postSearch';";
             // Not secure way below:
             // $query = "INSERT INTO users (username, pass, email) VALUES ($username, $pass, $email);";
             

@@ -17,11 +17,11 @@ function outputPostSummary(array $result,string $summary) {
     echo '<div class="postHeader">';
     echo '  <h4>Author: ' . $result["author"] . '</h4>';
     echo '  <h3>' . $result["title"] . '</h3>';
-    echo '  <h4>' . $result["created_at"] . '</h4></br>';
+    echo '  <h4>' . $result["created_at"] . '</h4>';
     echo '</div>';
     echo '  <img src="' . $result["image_url"] . '"></br>';
     echo '  <p>' . $summary . '</p></br>';
-    echo '  <a href="../posts/post.php?id=' . $result["id"] . '">Read more</a>';
+    echo '  <a href="../posts/article.php?id=' . $result["id"] . '">Read more</a>';
 }
 
 function outputPost(array $result) {
