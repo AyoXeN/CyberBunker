@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             try {
                 require_once "dbh.inc.php";
-                require_once "registerModel.inc.php";
-                require_once "registerController.inc.php";
+                require_once "models/registerModel.inc.php";
+                require_once "controllers/registerController.inc.php";
 
                 // Error handlers
 

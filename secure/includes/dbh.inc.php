@@ -2,8 +2,8 @@
 // Database connection settings
 $host = 'localhost';      // Database host
 $db = 'cyberbunker';    // Database name
-$dbuser = 'AyoXeN';  // Database username
-$dbpass = 'aA4G$@NyzYmv8Yx2M&@#Uzsu';  // Database password
+$dbuser = 'root';  // Database username
+$dbpass = '';  // Database password
 
 // Create a PDO database connection
 try {
