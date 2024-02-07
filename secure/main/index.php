@@ -38,14 +38,13 @@ require_once '../includes/views/postsView.inc.php';
     </header>
 
     <main>
-    <h1 id="welcomeBanner">
-        <div id="lineOne">Welcome to CyberBunker!</div>
-        <div id="lineTwo">This is a one man honeypot project</div>
-        <div id="lineThree">created to better understand the web security.</div>
-    </h1>
-
-
         <article>
+            <h1 id="welcomeBanner">
+                <div id="lineOne">Welcome to the CyberBunker!</div>
+                <div id="lineTwo">This is a one-man honeypot project</div>
+                <div id="lineThree">created to better understand the web security.</div>
+            </h1>
+
             <div class="matrix"></div>
             <form class="searchForm" action="../posts/postSearch.php" method="POST">
                 <input type="text" name="postSearch" placeholder="Search for post">

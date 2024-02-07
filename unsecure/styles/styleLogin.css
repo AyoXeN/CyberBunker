@@ -8,93 +8,186 @@
     src: url(fonts/JosefinSans-VariableFont_wght.ttf);
 }
 
-@font-face {
-    font-family: DotGothic16;
-    src: url(fonts/DotGothic16-Regular.ttf);
+* {
+/*Box model stuff*/
+    margin: 0;
+    padding: 0;
+/*Miscellaneous*/
+    box-sizing: border-box;
 }
 
 body {
-    font-family: JosefinSans;
-    margin: 0;
-    padding: 0;
-    background-image: url('Login.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+/*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*Box model stuff*/
+    min-height: 100vh;
     background-attachment: fixed;
+    background-image: url('Login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+/*Typography stuff*/
+    font-family: Tektur;
 }
 
 a {
+/*Miscellaneous*/
     cursor: pointer;
 }
 
 header {
+/*Display stuff*/
+    display: flex;
+    justify-content: right;
+/*Positioning stuff*/
+    position: fixed;
     top: 0;
+    z-index: 1;
+/*Box model stuff*/
     width: 100%;
     height: 40px;
     background-color: #010f01;
-    display: flex;
-    position: fixed;
-    justify-content: right;
-    z-index: 1;
 }
 
 nav {
+/*Positioning stuff*/
     position: relative;
     right: 0;
-    width: 470px;
+/*Box model stuff*/
+    width: 540px;
 }
 
 nav ul {
+/*Miscellaneous*/
     list-style: none;
 }
 
 nav ul li {
+/*Display stuff*/
     display: inline;
-    float: left;
-    padding: 10px;
+/*Box model stuff*/
     margin-right: 35px;
+    padding: 10px;
+/*Miscellaneous*/
+    float: left;
 }
 
 nav ul li a {
-    font-family: DotGothic16;
-    color: #3de638;
-    text-shadow: 1px 1px 0 black;
+/*Typography stuff*/
     text-decoration: none;
+    text-shadow: 1px 1px 0 black;
+    color: #3de638;
 }
 
 main {
-    margin: 0 auto;
-    width: 60%;
-    position: relative;
+/*Box model stuff*/
+    width: 400px;
+    padding: 25px 30px;
+    border: 2px solid #6c6d64;
+    border-radius: 10px;
+    background: transparent;
+/*Typography stuff*/
     color: #3de638;
-    text-shadow: 1px 1px 0 black;
-    text-align: center;
-    background-color: transparent;
+/*Miscellaneous*/
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px black;
 }
 
-h1 {
-    font-family: DotGothic16;
-    position: relative;
-    top: 180px;
-    font-size: 48px;
+main h1 {
+/*Typography stuff*/
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 2px 2px 0 black;
     text-transform: uppercase;
     color: #3de638;
-    text-shadow: 2px 2px 0 black;
-    background-color: transparent;
 }
 
-form {
-    font-family: DotGothic16;
-    margin: 240px 35% 20px;
-    position: relative;
-    width: max-content;
-    font-size: xx-large;
+main .input-box {
+/*Box model stuff*/
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
 }
 
-input {
-    width: 300px;
+.input-box input {
+/*Box model stuff*/
+    width: 100%;
+    height: 100%;
+    padding: 20px 45px 20px 20px;
+    border: none;
+    border: 2px solid #6c6d64;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
 }
 
-main a {
-    background-color: #010f01;
+.input-box input::placeholder {
+/*Typography stuff*/
+    color: #3de638;
+}
+
+.input-box i {
+/*Positioning stuff*/
+    position: absolute;
+    right: 10%;
+/*Typography stuff*/
+    font-size: 20px;
+/*Manipulations stuff*/
+    transform: translateY(60%);
+}
+
+main .forgot-password {
+/*Display stuff*/
+    display: flex;
+    justify-content: space-between;
+/*Box model stuff*/
+    margin: -15px 0 15px;
+/*Typography stuff*/
+    font-size: 14px;
+}
+
+.forgot-password a {
+/*Typography stuff*/
+    font-weight: 600;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 black;
+    color: #3de638;
+}
+
+main button {
+/*Box model stuff*/
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(0,12,12,0.9);
+/*Typography stuff*/
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #3de638;
+/*Miscellaneous*/
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+}
+
+main .register-link {
+/*Display stuff*/
+    display: flex;
+/*Box model stuff*/
+    margin: 20px 10px 15px;
+    padding: 0 15px;
+/*Typography stuff*/
+    font-size: 13.5px;
+    text-align: center;
+    text-shadow: 1px 1px 0 black;
+}
+
+.register-link p a {
+/*Typography stuff*/
+    font-weight: 600;
+    text-decoration: none;
+    color: #3de638;
 }

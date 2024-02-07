@@ -6,24 +6,30 @@ declare(strict_types=1); // Require data type in function declaration
 function signupInputs() {
 
     if (isset($_SESSION["signup_data"]["username"]) && !isset($_SESSION["errors_signup"]["usernameTaken"])) {
-        echo '<label for="username">Username:</label></br>
-        <input type="text" name="username" value="' . $_SESSION["signup_data"]["username"] . '" required></br>';
+        echo '<div class="input-box">
+        <input type="text" name="username" value="' . $_SESSION["signup_data"]["username"] . '" required>
+        </div>';
     } else {
-        echo '<label for="username">Username:</label></br>
-        <input type="text" name="username" required></br>';
+        echo '<div class="input-box">
+        <input type="text" name="username" placeholder="Username" required>
+        </div>';
     }
 
-    echo '<label for="password">Password:</label></br>
-    <input type="password" name="password" required></br>
-    <label for="password">Confirm password:</label></br>
-    <input type="password" name="confirm" required></br>';
+    echo '<div class="input-box">
+    <input type="password" name="password" placeholder="Password" required>
+    </div>
+    <div class="input-box">
+    <input type="password" name="confirm" placeholder="Repeat password" required>
+    </div>';
 
     if (isset($_SESSION["signup_data"]["email"]) && !isset($_SESSION["errors_signup"]["invalidEmail"]) && !isset($_SESSION["errors_signup"]["emailTaken"])) {
-        echo '<label for="email">E-mail:</label></br>
-        <input type="text" name="email" value="' . $_SESSION["signup_data"]["email"] . '" required></br>';
+        echo '<div class="input-box">
+        <input type="text" name="email" value="' . $_SESSION["signup_data"]["email"] . '" required>
+        </div>';
     } else {
-        echo '<label for="email">E-mail:</label></br>
-        <input type="text" name="email" required></br>';
+        echo '<div class="input-box">
+        <input type="text" name="email" placeholder="E-mail" required>
+        </div>';
     }
 }
 

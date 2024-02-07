@@ -10,6 +10,7 @@ require_once '../includes/views/loginView.inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/styleLogin.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Login</title>
 </head>
 
@@ -29,32 +30,37 @@ require_once '../includes/views/loginView.inc.php';
             </ul> 
         </nav>
     </header>
-
-    <main>
-        <?php
+    <?php
         if(!isset($_SESSION["user_id"])){ ?>
-            <h1 id="welcomeBanner">Identify Yourself</h1>
-
+        <main>
+        
             <form action="../includes/login.inc.php" method="post">
+                <h1 id="welcomeBanner">Identify Yourself</h1>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <i class='bx bxs-lock' ></i>
+                </div>
 
-                <label for="username">Username:</label></br>
-                <input type="text" name="username" required></br>
-                <label for="password">Password:</label></br>
-                <input type="password" name="password" required></br>
+                <div class="forgot-password">
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+
                 <button type="submit">Enter</button>
 
+                <div class="register-link">
+                    <p>Not a member? <a href="register.php" id="joinLegion">Join the Legion</a></p>
+                </div>
+                
             </form>
 
-            <?php
-            checkLoginErrors();
-            ?>
+        </main>
+    <?php } ?>
 
-
-            <a href="register.php">Join the legion</a>
-        <?php } ?>
-
-        
-    </main>
     <script src="../js/hover.js"></script>
 </body>
 </html>

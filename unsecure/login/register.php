@@ -31,15 +31,14 @@ require_once '../includes/views/loginView.inc.php';
         </nav>
     </header>
 
-    <main>
-        <?php
+    <?php
         if(!isset($_SESSION["user_id"])){ ?>
-            <h1 id="welcomeBanner">Join The Legion</h1>
-
+        <main>
             <form action="../includes/register.inc.php" method="post">
-                <?php
-                signupInputs();
-                ?>
+                <h1 id="welcomeBanner">Join The Legion</h1>
+                    <?php
+                    signupInputs();
+                    ?>
                 <button type="submit">Join</button>
             </form>
 
@@ -47,9 +46,13 @@ require_once '../includes/views/loginView.inc.php';
             checkSignupErrors();
             ?>
 
-            <a href="login.php">Enter the CyberBunker</a>
-        <?php } ?>
-    </main>
+            <div class="register-link">
+                    <p>Already a member? <a href="login.php" id="enterCyberbunker">Enter the CyberBunker</a></p>
+            </div>
+        
+        </main>
+    <?php } ?>
+
     <script src="../js/hover.js"></script>
 </body>
 </html>

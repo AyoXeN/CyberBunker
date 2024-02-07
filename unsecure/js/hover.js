@@ -31,3 +31,12 @@ setupLink('Main', 'Main Page');
 setupLink('About', 'About');
 setupLink('Updates', 'Updates');
 setupLink('Login', 'Login');
+
+if(document.URL.includes("login.php")){
+    setupLink('forgotPassword', 'Forgot password?');
+    setupLink('joinLegion', 'Join the Legion');
+}
+
+if(document.URL.includes("register.php")){
+    setupLink('enterCyberbunker', 'Enter the CyberBunker');
+}

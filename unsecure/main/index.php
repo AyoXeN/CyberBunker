@@ -36,20 +36,24 @@ require_once '../includes/views/postsView.inc.php';
         </nav>
     </header>
 
-    <h1 id="welcomeBanner">Welcome to CyberBunker! This is a one man honeypot project created to better understand the web security.</h1>
-
     <main>
         <article>
+            <h1 id="welcomeBanner">
+                <div id="lineOne">Welcome to the CyberBunker!</div>
+                <div id="lineTwo">This is a one-man honeypot project</div>
+                <div id="lineThree">created to better understand the web security.</div>
+            </h1>
+
+            <div class="matrix"></div>
             <form class="searchForm" action="../posts/postSearch.php" method="POST">
-                <label for="search">Search for post:</label>
-                <input id="search" type="text" name="postSearch" placeholder="Search...">
+                <input type="text" name="postSearch" placeholder="Search for post">
                 <button type="submit">Search</button>
             </form>
             
-            <div id="newPost">
+            <!-- <div id="newPost">
                 <a href="#"><h2>Add New Post</h2></a>
-            </div>
-            
+            </div> -->
+
             <?php
                 outputAllPostSummaries();
                 echo $var; // test logging

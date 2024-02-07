@@ -22,6 +22,6 @@ function checkLoginErrors() {
 
 function outputUsername() {
     if(isset($_SESSION["user_id"])){
-        echo $_SESSION["user_username"];
+        echo htmlspecialchars($_SESSION["user_username"]); //prevents XSS
     }
 }

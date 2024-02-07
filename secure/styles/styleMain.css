@@ -89,11 +89,9 @@ nav ul li a, form{
 }
 
 main {
-/*Positioning stuff*/
-    top: 30vh;
 /*Box model stuff*/
     width: 60%;
-    margin: 0 auto;
+    margin: 40vh auto;
     background-color: transparent;
 /*Typography stuff*/
     color: #3de638;
@@ -179,7 +177,7 @@ main {
 /*Box model stuff*/
     width: 20%;
     height: 45px;
-    border: none;
+    border: 2px solid #6c6d64;
     border-radius: 5px;
     outline: none;
     background: #010f01;
@@ -292,7 +290,7 @@ article {
     height: 45px;
     margin: auto;
     padding: 9px;
-    border: none;
+    border: 2px solid #6c6d64;
     border-radius: 5px;
     outline: none;
     background: #010f01;
